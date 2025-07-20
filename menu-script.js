@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Dynamically build menu
     const navLinks = [
-        { text: "Home", href: "../index.html" },
-        { text: "Shop", href: "index.html" },
+        { text: "Home", href: "index.html" },
+        { text: "Shop", href: "../store/index.html" },
         { text: "About", href: "../about/index.html" },
         { text: "Contact", href: "../contact/index.html" }
     ];

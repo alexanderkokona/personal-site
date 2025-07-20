@@ -221,3 +221,61 @@ main {
   object-fit: cover; /* Ensures image fills box without distortion */
   display: block;
 }
+
+.products-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* crop images nicely */
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Button styling */
+.products-meta button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem 0.5rem 0 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.products-meta button:hover {
+  background-color: #e04858;
+}
+
+/* Menu link padding for easier click */
+.menu a {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  background-color: rgba(255,255,255,0.2);
+  outline: none;
+}
+
+/* Improve footer text size and spacing */
+.foot {
+  font-size: 1rem;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive: fix .products-meta border on small devices */
+@media (max-width: 700px) {
+  .products-meta {
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 0.5rem 0 1rem;
+    margin: 0 0 1rem 0;
+    text-align: left;
+  }
+}

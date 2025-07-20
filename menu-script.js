@@ -1,14 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Optional: dynamically build menu
+    // Dynamically build menu
     const navLinks = [
-        { text: "Home", href: "home/index.html" },
-        { text: "Shop", href: "shop/index.html" },
-        { text: "About", href: "about/index.html" },
-        { text: "Contact", href: "contact/index.html" }
+        { text: "Home", href: "../index.html" },
+        { text: "Shop", href: "index.html" },
+        { text: "About", href: "../about/index.html" },
+        { text: "Contact", href: "../contact/index.html" }
     ];
 
     const menuContainer = document.getElementById("menu");
     if (menuContainer && navLinks.length > 0) {
+        menuContainer.innerHTML = ""; // Clear any existing content
         navLinks.forEach(link => {
             const a = document.createElement("a");
             a.textContent = link.text;
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Menu toggle logic
+    // Toggle menu on smaller screens
     const menuButton = document.querySelector(".menu-button");
     const menu = document.querySelector(".menu");
 

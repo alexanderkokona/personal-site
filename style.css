@@ -19,19 +19,16 @@ body {
 header {
   background-color: var(--primary-color);
   padding: 1rem;
-  position: relative;
 }
 
 .main-title {
   color: white;
   font-family: var(--secondary-font);
-  margin: 0;
 }
 
 .menu {
   display: flex;
   gap: 1rem;
-  align-items: center;
 }
 
 .menu a {
@@ -44,7 +41,6 @@ header {
   text-decoration: underline;
 }
 
-/* Mobile menu styles */
 @media (max-width: 768px) {
   .menu {
     display: none;
@@ -68,20 +64,15 @@ header {
     border: none;
     cursor: pointer;
     color: white;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
   }
 }
 
-/* Desktop menu hides hamburger */
 @media (min-width: 769px) {
   .menu-button {
     display: none;
   }
 }
 
-/* Footer styles */
 .foot {
   background-color: var(--primary-color);
   padding: 1rem;
@@ -95,34 +86,14 @@ header {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
-/* Product grid layout */
-@media screen and (max-width: 699px) {
-  .products {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+a:link,
+a:visited {
+  color: var(--accent-color);
 }
 
-@media screen and (min-width: 700px) and (max-width: 1023px) {
-  .products {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .products {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-  }
-}
-
-/* Image Modal Viewer */
 .hide {
   display: none;
 }
@@ -154,4 +125,127 @@ dialog .image-modal img {
   border: none;
   border-radius: 50%;
   cursor: pointer;
+}
+
+/* Product metadata */
+.products-meta {
+  border-right: 2px solid #ccc;
+  padding: 0 1rem;
+  margin-right: 1rem;
+  line-height: 1.2;
+}
+
+.products-meta p {
+  text-align: right;
+  margin: 0.2em 0;
+}
+
+.products-meta p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Product content */
+.products-content h2 {
+  margin-top: 0;
+}
+
+.products-content img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+.products {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+
+/* Responsive product layout */
+@media screen and (max-width: 700px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.products-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* crop images nicely */
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+/* Button styling */
+.products-meta button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem 0.5rem 0 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.products-meta button:hover {
+  background-color: #e04858;
+}
+
+/* Menu link padding for easier click */
+.menu a {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  background-color: rgba(255,255,255,0.2);
+  outline: none;
+}
+
+/* Improve footer text size and spacing */
+.foot {
+  font-size: 1rem;
+  padding: 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Responsive: fix .products-meta border on small devices */
+@media (max-width: 700px) {
+  .products-meta {
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding: 0.5rem 0 1rem;
+    margin: 0 0 1rem 0;
+    text-align: left;
+  }
 }

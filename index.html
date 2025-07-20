@@ -8,6 +8,7 @@
     <title>Trinkets+</title>
     <link rel="stylesheet" href="style.css">
     <script src="menu-script.js" defer></script>
+    <script src="carousel.js" defer></script>
     <link rel="icon" href="trinkets-white-logo.png" type="image/png" />
 
 </head>
@@ -20,7 +21,22 @@
   <main>
     <h2>Welcome to Trinkets+</h2>
     <p>This is the home page for Trinkets+, where you can browse handcrafted minis, custom models, and collectibles.</p>
-    <img src="turtle-duck.jpg" alt="Turtle Duck" class="home-img" />
+
+    <section class="carousel-container">
+    <div class="carousel">
+        <img src="assets/dndmini1.jpg" alt="Image 1" class="carousel-slide active">
+        <img src="assets/exocrine.jpg" alt="Image 2" class="carousel-slide">
+        <img src="assets/haruspex.jpg" alt="Image 3" class="carousel-slide">
+        <img src="assets/pidgeon.jpg" alt="Image 4" class="carousel-slide">
+        <img src="assets/spore.jpg" alt="Image 5" class="carousel-slide">
+        <img src="assets/turtle-duck.jpg" alt="Image 6" class="carousel-slide">
+
+        <!-- Add more images as needed -->
+        <button class="carousel-btn prev">‹</button>
+        <button class="carousel-btn next">›</button>
+    </div>
+</section>
+
     <p><a href="store/index.html">Visit the Store</a></p>
   </main>
   <footer class="foot">

@@ -249,3 +249,57 @@ main {
     text-align: left;
   }
 }
+
+.carousel-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 1rem;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}

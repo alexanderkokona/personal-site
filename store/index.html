@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A dynamic website to fascilitate my business needs">
-    <meta name="author" content="Alexander Kokona">
-    <title>Trinkets+</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="products-script.js" defer></script>
-    <link rel="icon" href="trinkets-white-logo.png" type="image/png" />
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A dynamic website to fascilitate my business needs" />
+  <meta name="author" content="Alexander Kokona" />
+  <title>Trinkets+</title>
+  <link rel="stylesheet" href="/personal-site/style.css" />
+  <link rel="icon" href="/personal-site/trinkets-white-logo.png" type="image/png" />
+  <script src="/personal-site/products-script.js" defer></script>
 </head>
 <body>
-    <header>
-  <h1 class="main-title">Trinkets+</h1>
-  <button class="menu-button" aria-label="Toggle navigation">☰</button>
-  <nav class="menu" id="menu" aria-label="Main navigation">
-    <ul>
-      <li><a href="alexanderkokona/personal-site/index.html">Home</a></li>
-      <li><a href="alexanderkokona/personal-site/store/index.html">Store</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <h1 class="main-title">Trinkets+</h1>
+    <button class="menu-button" aria-label="Toggle navigation">☰</button>
+    <nav class="menu" id="menu" aria-label="Main navigation">
+      <ul>
+        <li><a href="/personal-site/index.html">Home</a></li>
+        <li><a href="/personal-site/store/index.html">Store</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <div class="title">
-            <h1>Current Work</h1>
-        </div>
+  <main>
+    <div class="title">
+      <h1>Current Work</h1>
+    </div>
 
-        
-        <div class="products">
-            <section class="products" id="products-container"></section>
-        </div>
+    <section class="products" id="products-container"></section>
+  </main>
 
-<footer class="foot">
+  <footer class="foot">
     <p class="toes">this be the footer</p>
-</footer>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuButton = document.querySelector(".menu-button");
+      const menu = document.getElementById("menu");
+
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    });
+  </script>
 </body>
 </html>

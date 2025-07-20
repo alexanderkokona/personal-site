@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevBtn = document.querySelector(".carousel-btn.prev");
     const nextBtn = document.querySelector(".carousel-btn.next");
 
-    let currentIndex = 0;
+    let currentSlide = 0;
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -11,19 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function showNext() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
+    prevBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    });
 
-    function showPrev() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    }
+    nextBtn.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    });
 
-    nextBtn.addEventListener("click", showNext);
-    prevBtn.addEventListener("click", showPrev);
-
-    // Auto-play every 5 seconds
-    setInterval(showNext, 5000);
+    // Optional autoplay every 5 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 5000);
 });

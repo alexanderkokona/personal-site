@@ -251,31 +251,28 @@ main {
 }
 
 .carousel-container {
-    width: 100%;
-    max-width: 900px;
-    margin: 2rem auto;
     position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
     overflow: hidden;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 450px;
 }
 
 .carousel-slide {
+    display: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
     transition: opacity 0.5s ease-in-out;
-    border-radius: 1rem;
+    border-radius: 12px;
 }
 
 .carousel-slide.active {
@@ -286,14 +283,14 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
+    background-color: rgba(255,255,255,0.7);
     border: none;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
-    z-index: 1;
-    border-radius: 0.5rem;
+    z-index: 2;
+    border-radius: 50%;
+    user-select: none;
 }
 
 .carousel-btn.prev {
@@ -302,4 +299,8 @@ main {
 
 .carousel-btn.next {
     right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255,255,255,0.9);
 }

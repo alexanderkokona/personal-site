@@ -2,51 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="A dynamic website to facilitate my business needs"/>
-  <meta name="author" content="Alexander Kokona" />
-  <title>Trinkets+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trinkets+ | Home</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="trinkets-white-logo.png" type="image/png" />
-  <script src="menu.js" defer></script>
-  <script src="carousel.js" defer></script>
+  <link rel="preload" as="image" href="images/hero.avif" type="image/avif">
+  <link rel="preload" as="image" href="images/hero.webp" type="image/webp">
+  <script src="scripts/carousel.js" defer></script>
 </head>
 <body>
   <header>
-    <h1 class="main-title">Trinkets+</h1>
-    <button class="menu-button" aria-label="Toggle navigation">☰</button>
-    <nav class="menu" id="menu" aria-label="Main navigation">
-      <ul>
-        <li><a href="/personal-site/index.html">Home</a></li>
-        <li><a href="/personal-site/store/index.html">Store</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Welcome to Trinkets+</h1>
   </header>
-
   <main>
-    <h2>Welcome to Trinkets+</h2>
-    <p>This is the home page for Trinkets+, where you can browse handcrafted minis, custom models, and collectibles.</p>
-
-    <section class="carousel-container">
-      <div class="carousel">
-        <img src="assets/dndmini1.jpg" alt="Image 1" class="carousel-slide active" />
-        <img src="assets/exocrine.jpg" alt="Image 2" class="carousel-slide" />
-        <img src="assets/haruspex.jpg" alt="Image 3" class="carousel-slide" />
-        <img src="assets/pidgeon.jpg" alt="Image 4" class="carousel-slide" />
-        <img src="assets/spore.jpg" alt="Image 5" class="carousel-slide" />
-        <img src="assets/turtle-duck.jpg" alt="Image 6" class="carousel-slide" />
-
-        <button class="carousel-btn prev">‹</button>
-        <button class="carousel-btn next">›</button>
-      </div>
+    <!-- Optimized Hero Image -->
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero.avif" type="image/avif">
+        <source srcset="images/hero.webp" type="image/webp">
+        <img src="images/hero.jpg" alt="Featured item" width="1200" height="600" loading="eager">
+      </picture>
     </section>
 
+    <!-- Image Carousel -->
+    <section class="carousel">
+      <div class="carousel-container">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-images">
+          <picture>
+            <source srcset="images/img1.avif" type="image/avif">
+            <source srcset="images/img1.webp" type="image/webp">
+            <img src="images/img1.jpg" alt="Item 1" width="400" height="300">
+          </picture>
+          <picture>
+            <source srcset="images/img2.avif" type="image/avif">
+            <source srcset="images/img2.webp" type="image/webp">
+            <img src="images/img2.jpg" alt="Item 2" width="400" height="300">
+          </picture>
+          <picture>
+            <source srcset="images/img3.avif" type="image/avif">
+            <source srcset="images/img3.webp" type="image/webp">
+            <img src="images/img3.jpg" alt="Item 3" width="400" height="300">
+          </picture>
+        </div>
+        <button class="next">&#10095;</button>
+      </div>
+    </section>
   </main>
-
-  <footer class="foot">
-    <p class="toes">&copy; 2025 Trinkets+. All rights reserved.</p>
-  </footer>
 </body>
 </html>
